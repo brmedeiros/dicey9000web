@@ -2,6 +2,7 @@
 
 dicey9000web.txt
 *.sqlite3
+commit-messages.txt
 
 ### Python stuff
 

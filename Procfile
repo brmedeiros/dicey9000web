@@ -1,1 +1,1 @@
-web: python manage.py runserver
+web: gunicorn dicey9000web.wsgi --log-file -
