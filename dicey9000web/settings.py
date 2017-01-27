@@ -25,12 +25,15 @@ SECRET_KEY = os.environ['DJANGO_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', 'dicey9000web.herokuapp.com']
+ALLOWED_HOSTS = ['0.0.0.0',
+                 'dicey9000web.herokuapp.com',
+                 '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'dice.apps.DiceConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
