@@ -1,27 +1,35 @@
 body {
     background-color: #D8D8D8;
-    margin: 0px 20px 20px 20px;
+    margin: -10px 20px 20px 20px;
     padding: 10px;
 }
 
 header {
+    background-color: black;
+    box-shadow: 5px 5px 5px #888888;
     text-align: left;
 }
 
 header a {
-    text-decoration:none;
+    text-decoration: none;
     color: white;
 }
 
 header h1 {
-    background:black;
-    padding:20px
+    padding: 20px
 }
-    
+
+header img {
+    float: left;
+    width: 50px;
+    margin: -5px 10px 0px -10px
+}
+
 footer {
-    background:#aab;
-    color:white;
-    padding:5px;
+    background: #aab;
+    box-shadow: 3px 3px 3px #888888;
+    color: white;
+    padding: 5px;
 }
 
 /* .flex-container { */
@@ -36,4 +44,4 @@ footer {
 /*     padding: 10px; */
 /*     -webkit-flex: 1 100%; */
 /*     flex: 1 100%; */
-}
+/* } */

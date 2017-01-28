@@ -5,7 +5,8 @@ body {
 }
 
 header {
-    text-align: left;
+    background-color:black;
+    text-align:left;
 }
 
 header a {
@@ -14,7 +15,7 @@ header a {
 }
 
 header h1 {
-    background:black;
+    /* background:pink; */
     padding:20px
 }
     
@@ -36,4 +37,4 @@ footer {
 /*     padding: 10px; */
 /*     -webkit-flex: 1 100%; */
 /*     flex: 1 100%; */
-}
+/* } */

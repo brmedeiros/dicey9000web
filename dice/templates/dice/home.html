@@ -5,16 +5,21 @@
     <!-- Add CSS in static file -->
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'dice/style.css' %}">
-
+    <link rel="shortcut icon" href="{%  static 'dice/images/favicon.ico' %}">
     <title>dicey9000web</title>
   </head>
 
   <body>
     <header>
-      <h1><a href="{% url 'dice:home' %}">dicey9000 (in the web)</a></h1>
+      <h1>
+	<a href="{% url 'dice:home' %}">
+	  <img src="{% static 'dice/images/dice.png' %}" alt="dice">
+	  dicey9000 (in the web)
+	</a>
+      </h1>
     </header>
     <hr>
-    
+
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
     sagittis nunc justo, at cursus lectus pharetra vitae. Praesent sit
     amet pretium ligula. Sed cursus in quam vitae dignissim. Fusce
@@ -28,24 +33,8 @@
     ipsum. Pellentesque quis arcu ipsum. Interdum et malesuada fames
     ac ante ipsum primis in faucibus. Suspendisse nunc urna, ornare
     vel ex condimentum, tincidunt pharetra nisl.</p>
-    
-    <p>Praesent fermentum odio diam, non facilisis nulla lacinia
-    nec. Etiam aliquet erat orci, a scelerisque enim consectetur
-    vel. Cras nec ex sit amet elit dapibus porta sollicitudin non
-    risus. Nulla vulputate aliquet ornare. Fusce efficitur, libero eu
-    consequat blandit, eros diam convallis felis, sodales molestie
-    ante est sed ex. Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Ut ac fermentum nibh. Nunc ac pharetra ex, at
-    auctor lacus. Duis id iaculis ex, eget placerat felis. Maecenas
-    quis bibendum nisl, sed tincidunt nisi.</p>
-    
-    <p>Nulla eros metus, semper vel sem id, pretium porta
-    dolor. Maecenas blandit nec tellus non egestas. Integer a
-    venenatis massa, id faucibus quam. Aliquam et justo dignissim enim
-    porta ullamcorper vulputate sit amet dolor. Aliquam ut tortor eget
-    diam scelerisque ultricies ac at mi. Phasellus nec venenatis odio,
-    vel semper orci. Suspendisse eget maximus ante.</p>
 
     <footer>dicey9000web &copy 2017 by Bruno Medeiros</footer>
+  
   </body>
 </html>
