@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 0px 20px 20px 20px;
+    padding: 10px;
+}
+
+.headerlink {
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar {
+    /* margin-top: 20px; */
+    /* padding: 0; */
+    list-style: none;
+}

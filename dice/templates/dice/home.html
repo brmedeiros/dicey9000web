@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Add CSS in static file -->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'dice/style.css' %}">
+
+    <title>dicey9000web</title>
+  </head>
+
+  <body>
+    <h1><a class="headerlink" href="{% url 'dice:home' %}">dicey9000 (in the web)</a></h1>
+    <hr>
+    
+    <div class="main">
+      <p>Something something...</p>
+    </div>
+    <div class="sidebar">
+      <ul class="sidebar">
+	<li>FeelsGoodMan</li>
+	<li>FeelsBadMan</li>
+      </ul>
+    </div>
+  </body>
+</html>

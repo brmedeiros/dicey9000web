@@ -1,3 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .models import DiceRoll
+
+def home(request):
+    return render(request, 'dice/home.html')

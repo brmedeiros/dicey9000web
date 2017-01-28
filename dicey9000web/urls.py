@@ -19,7 +19,7 @@ from django.contrib import admin
 
 
 urlpatterns = [
-    url(r'^$', RedirectView.as_view(url='/dice/', permanent=True)), # redirects the base url to dice
     url(r'^dice/', include('dice.urls')),
+    url(r'^$', RedirectView.as_view(url='/dice/', permanent=True)), # redirects the base url to dice
     url(r'^admin/', admin.site.urls),
 ]
