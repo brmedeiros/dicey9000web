@@ -1,28 +1,14 @@
 body {
-    background-color: #D8D8D8;
-    margin: -10px 20px 20px 20px;
-    padding: 10px;
+    background: #D6DBDF;
+    padding: 16px;
 }
 
 header {
-    background-color: black;
     box-shadow: 5px 5px 5px #888888;
-    text-align: left;
 }
 
 header a {
     text-decoration: none;
-    color: white;
-}
-
-header h1 {
-    padding: 20px
-}
-
-header img {
-    float: left;
-    width: 50px;
-    margin: -5px 10px 0px -10px
 }
 
 footer {
@@ -31,17 +17,3 @@ footer {
     color: white;
     padding: 5px;
 }
-
-/* .flex-container { */
-/*     display: -webkit-flex; */
-/*     display: flex;   */
-/*     -webkit-flex-flow: row wrap; */
-/*     flex-flow: row wrap; */
-/*     text-align: left; */
-/* } */
-
-/* .flex-container > * { */
-/*     padding: 10px; */
-/*     -webkit-flex: 1 100%; */
-/*     flex: 1 100%; */
-/* } */
