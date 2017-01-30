@@ -51,32 +51,52 @@
     
     <section class="w3-panel">
       <h3 class="w3-text-red">Dice Roller</h3>
-      <form action="" method="post">
-	{% csrf_token %}
-	<div class="w3-row-padding">
-	  <div class="w3-quarter">
-	    <input class="w3-input w3-border" type="text" value="{{ number_of_dice }}">
-	    <label class="w3-label w3-text-red"><b>Number of Dice</b></label>
-	  </div>
-	  <div class="w3-quarter">
-	    <input class="w3-input w3-border" type="text" value="{{ dice_type }}">
-	    <label class="w3-label w3-text-red"><b>Dice Type</b></label>
-	  </div>
-	  <div class="w3-quarter">
-	    <input class="w3-input w3-border" type="text" value="{{ roll_modifier }}">
-	    <label class="w3-label w3-text-red"><b>Roll Modifier</b></label>
-	  </div>
-   	  <div class="w3-quarter">
-	    <input class="w3-input w3-border" type="text" value="{{ explode_value }}">
-	    <label class="w3-label w3-text-red"><b>Explode Value</b></label>
-	  </div>
-	  <div class="w3-quarter">
-	    <input class="w3-input w3-border" type="text" value="{{ success_condition }}">
-	    <label class="w3-label w3-text-red"><b>Success Condition</b></label>
-	  </div>
+      
+      <div class="w3-row-padding">
+	<div class="w3-quarter">
+	  
+	  <form action="" method="post">
+	    {% csrf_token %}
+	    <div class="w3-row-padding">
+
+	      <div class="w3-col">
+		<input class="w3-input w3-border" type="text" value="{{ number_of_dice }}">
+		<label class="w3-label w3-text-red"><b>Number of Dice</b></label>
+	      </div>
+
+	      <div class="w3-col">
+		<input class="w3-input w3-border" type="text" value="{{ dice_type }}">
+		<label class="w3-label w3-text-red"><b>Dice Type</b></label>
+	      </div>
+
+	      <div class="w3-col">
+		<input class="w3-input w3-border" type="text" value="{{ roll_modifier }}">
+		<label class="w3-label w3-text-red"><b>Roll Modifier</b></label>
+	      </div>
+
+	      <div class="w3-col">
+		<input class="w3-input w3-border" type="text" value="{{ explode_value }}">
+		<label class="w3-label w3-text-red"><b>Explode Value</b></label>
+	      </div>
+
+	      <div class="w3-col">
+		<input class="w3-input w3-border" type="text" value="{{ success_condition }}">
+		<label class="w3-label w3-text-red"><b>Success Condition</b></label>
+	      </div>
+
+	    </div>
+
+	    <input type="submit" value="Roll!" class="w3-btn w3-red w3-ripple
+						      w3-margin-top w3-margin-left">
+	  </form>
+	  <br>
 	</div>
-	<input type="submit" value="Roll!" class="w3-btn w3-red w3-ripple w3-margin-top w3-margin-left">
-      </form>
+	
+	<div class="w3-panel w3-rest w3-border w3-leftbar">
+	  <h4 class="w3-text-red">Roll Results</h4>
+	</div>
+
+      </div>
     </section>
     
     <footer class="w3-panel w3-card-4 w3-padding-tiny w3-round w3-grey w3-text-white">
