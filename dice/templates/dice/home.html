@@ -49,9 +49,11 @@
 	    <div class="w3-row-padding">
 	      {% for field in form %}
 	      <div class="w3-col w3-margin-bottom">
-		{{ field.errors }}
-		{{ field|add_class:"w3-input w3-border" }}
+		{{ field|add_class:"w3-input w3-border"}}
 		<label class="w3-label w3-text-red"><b>{{ field.label }}</b></label>
+		{% for error in field.errors %}
+		<span class="w3-text-red w3-small"><br>{{ error }}</span>
+		{% endfor %}
 	      </div>
 	      {% endfor %}
 	    </div>

@@ -33,8 +33,8 @@ class HomeDiceRollForm(forms.Form):
     def clean_explode_value(self):
         data = self.cleaned_data['explode_value']
         try:
-            if self.cleaned_data['dice_type'] != None and data > self.cleaned_data['dice_type']:
-                raise ValidationError('hi!')
+            if self.cleaned_data['dice_type'] and data!= None and data > self.cleaned_data['dice_type']:
+                raise ValidationError('Ensure this value is less or equal to Dice Type')
         except (KeyError):
             pass
         return data
@@ -42,8 +42,8 @@ class HomeDiceRollForm(forms.Form):
     def clean_success_condition(self):
         data = self.cleaned_data['success_condition']
         try:
-            if self.cleaned_data['dice_type'] != None and data > self.cleaned_data['dice_type']:
-                raise ValidationError('hey!')
+            if self.cleaned_data['dice_type'] and data != None and data > self.cleaned_data['dice_type']:
+                raise ValidationError('Ensure this value is less or equal to Dice Type')
         except (KeyError):
             pass
         return data
