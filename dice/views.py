@@ -9,6 +9,7 @@ from .models import DiceRoll
 def home(request):
     if request.method == 'POST':
         form = HomeDiceRollForm(request.POST)
+        roll_output = ''
         if form.is_valid():
             print('form ok')
             number_of_dice = form.clean_number_of_dice()
@@ -21,9 +22,12 @@ def home(request):
             roll.roll_dice()
             roll.explode_dice()
             roll.success_counter()
-            out_message = roll.output()
-            print(out_message)
-        return render(request, 'dice/home.html', {'form': form})
+            roll_output = roll.output()
+            print(roll_output)
+        return render(request, 'dice/home.html', {
+            'form': form,
+            'roll_output': roll_output,
+        })
         
             
     else:
