@@ -37,7 +37,7 @@
 
       <div class="w3-row-padding">
 
-	<div class="w3-quarter">
+	<div class="w3-col l3 m6">
 	  <form method="post" novalidate>
 	    {% csrf_token %}
 	    {% load widget_tweaks %}
@@ -60,8 +60,8 @@
 
 	<div class="w3-rest w3-panel w3-border w3-leftbar">
 	  <h3 class="w3-text-red">Roll Results</h4>
-	  <p class="w3-large w3-leftbar w3-pale-red">
-	    <span class="w3-margin-left">{{ roll_output }}</span></p>
+	  <div class="w3-large w3-leftbar w3-pale-red w3-margin-bottom">
+	    <p class="w3-margin-left" style="white-space:pre-wrap">{{ roll_output|safe }}</p></div>
 	</div>
       </div>
     </section>

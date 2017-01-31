@@ -20,8 +20,8 @@ def home(request):
                             explode_value, success_condition)
             roll.roll_dice()
             roll.explode_dice()
-            roll.success_counter()
-            roll_output = roll.output()
+            roll.success_counter(html=True)
+            roll_output = roll.output(html=True)
         return render(request, 'dice/home.html', {
             'form': form,
             'roll_output': roll_output,

@@ -31,24 +31,34 @@ class DiceRoll():
                     self.formated_results[i+1:i+1] = ['x.{}'.format(self.results[i+1])]
         return self.results
 
-    def success_counter(self):
+    def success_counter(self, html=False):
         if self.success_condition != None:
             self.successes = 0
             for i, result in enumerate(self.results):
                 if result >= self.success_condition:
                     self.successes += 1
-                    self.formated_results[i] = '**{}**'.format(self.formated_results[i])
+                    if html==False:
+                        self.formated_results[i] = '**{}**'.format(self.formated_results[i])
+                    elif html==True:
+                        self.formated_results[i] = '<b>{}</b>'.format(self.formated_results[i])
         return self.successes
 
-    def output(self):
+    def output(self, html=False):
         success_msg = ''
         if self.success_condition != None:
             if self.successes == 0:
                 success_msg = '\nFailure...'
+                if html==True:
+                    success_msg = '<br>Failure...'
             elif self.successes == 1:
                 success_msg = '\n**1** success!'
+                if html==True:
+                    success_msg = '<br><b>1</b> success!'
             elif self.successes > 1:
                 success_msg = '\n**{}** successes!'.format(self.successes)
+                if html==True:
+                    success_msg = '<br><b>{}</b> successes!'.format(self.successes)
+                                    
         if self.roll_modifier != None:
             if self.roll_modifier > 0:
                 return ' + '.join(self.formated_results) + ' + {} = {}'.format(self.roll_modifier, self.total) + success_msg
