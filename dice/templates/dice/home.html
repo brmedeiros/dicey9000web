@@ -25,11 +25,15 @@
     </header>
 
     <section class="w3-panel">
-      <h3 class="w3-text-red">Hello!</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-	sagittis nunc justo, at cursus lectus pharetra vitae. Praesent sit
-	amet pretium ligula. Sed cursus in quam vitae dignissim.</p>
-
+      <p class="w3-large"><strong class="w3-hover-text-red">dicey9000</strong> is a dice roll web app powered by
+	<a href="https://www.djangoproject.com/" target="_blank" class="w3-text-red">Django</a>
+	that was originally designed as a
+	<a href="https://discordapp.com/" target="_blank" class="w3-text-red">Discord</a> bot.
+	Check out source code for this page at
+	<a href="https://github.com/brmedeiros/dicey9000web" target="_blank" class="w3-text-red">
+	  Github.</a></p>
+      <hr style="border-top: 1px solid LightGrey; margin-bottom: 0;">
+	
     </section>
 
     <section class="w3-panel">
@@ -45,7 +49,11 @@
 	    <div class="w3-row-padding">
 	      {% for field in form %}
 	      <div class="w3-col w3-margin-bottom">
-		{{ field|add_class:"w3-input w3-border"}}
+		{% if field.label == "Roll Modifier" %}
+		{{ field|add_class:"w3-input w3-border"|attr:"placeholder:0 for sum of the results" }}
+		{% else %}
+		{{ field|add_class:"w3-input w3-border" }}
+		{% endif %}
 		<label class="w3-label w3-text-red"><b>{{ field.label }}</b></label>
 		{% for error in field.errors %}
 		<span class="w3-text-red w3-small"><br>{{ error }}</span>
