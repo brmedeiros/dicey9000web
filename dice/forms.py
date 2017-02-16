@@ -1,18 +1,7 @@
 from django import forms
 from django.core.exceptions import ValidationError
 
-# roll_modifier_help_text = 'You can enter "0" in this field '\
-#                           'if you want the sum of the roll results '\
-#                           'with no modifier'
-
-#the above comment shoud be in a tooltip
-
 class HomeDiceRollForm(forms.Form):
-#     my_errors = {
-#         'required': 'hi!!',
-#         'invalid1': 'explosion!',
-#         'invalid2': 'Enter a integer (positive or negative)'
-#     }
     
     number_of_dice = forms.IntegerField(min_value=1, max_value=100, label='Number of Dice')
     dice_type = forms.IntegerField(min_value=1, label='Dice Type')
@@ -34,7 +23,7 @@ class HomeDiceRollForm(forms.Form):
         data = self.cleaned_data['explode_value']
         try:
             if self.cleaned_data['dice_type'] and data!= None and data > self.cleaned_data['dice_type']:
-                raise ValidationError('Ensure this value is less or equal to Dice Type')
+                raise ValidationError('Ensure this value is less than or equal to Dice Type')
         except (KeyError):
             pass
         return data
@@ -43,7 +32,7 @@ class HomeDiceRollForm(forms.Form):
         data = self.cleaned_data['success_condition']
         try:
             if self.cleaned_data['dice_type'] and data != None and data > self.cleaned_data['dice_type']:
-                raise ValidationError('Ensure this value is less or equal to Dice Type')
+                raise ValidationError('Ensure this value is less than or equal to Dice Type')
         except (KeyError):
             pass
         return data
